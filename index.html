@@ -5,105 +5,144 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Britlex Language School</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <header>
-      <nav>
-        <a href="/"><span>Brit</span>lex</a>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Skills</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Pricing</a></li>
-          <li><a href="#">Contacts</a></li>
-        </ul>
-      </nav>
-      <button type="button">Let’s Talk</button>
+      <div class="container header-container">
+        <nav class="header-navigation">
+          <a class="header-logo" href="/">Brit<span>lex</span></a>
+          <ul class="header-list">
+            <li class="header-item">
+              <a class="header-link" href="#">Home</a>
+            </li>
+            <li class="header-item">
+              <a class="header-link" href="#skills">Skills</a>
+            </li>
+            <li class="header-item">
+              <a class="header-link" href="#">About Us</a>
+            </li>
+            <li class="header-item">
+              <a class="header-link" href="#">Pricing</a>
+            </li>
+            <li class="header-item">
+              <a class="header-link" href="#">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+        <button class="header-btn" type="button">Let’s Talk</button>
+      </div>
     </header>
     <main>
-      <section>
-        <h1>Learn Any Foreign Language</h1>
-        <img
-          src="./images/bulb-icon.svg"
-          alt="lamp"
-          width="85.24"
-          height="85.24"
-        />
-        <p>
-          With our teachers who write a program for each student, you will be
-          able to make your first sketch after the first lesson.
-        </p>
-        <button type="button">Get started</button>
-        <img
-          src="./images/learning-languages.png"
-          alt="the girl learns foriegn languages"
-          width="654"
-          height="510"
-        />
+      <section class="learn" id="learn">
+        <div class="container">
+          <h1>Learn Any Foreign Language</h1>
+          <img
+            src="./images/bulb-icon.svg"
+            alt="lamp"
+            width="85.24"
+            height="85.24"
+          />
+          <p>
+            With our teachers who write a program for each student, you will be
+            able to make your first sketch after the first lesson.
+          </p>
+          <button type="button">Get started</button>
+          <img
+            src="./images/learning-languages.png"
+            alt="the girl learns foriegn languages"
+            width="654"
+            height="510"
+          />
+        </div>
       </section>
-      <section>
-        <h2>Skills</h2>
-        <ul>
-          <li>
-            <img
-              src="./images/Shared-goals-bro1.png"
-              alt="the tacher takes the speaking exam"
-              width="390"
-              height="390"
-            />
-            <h3>Speaking</h3>
-            <p>
-              Improve your English skills and confidence. Live classes and
-              interactive lessons online. 20% extra free for a limited time only
-              Learn English online and improve your skills through our
-              high-quality courses and resources – all designed for adult
-              language learners.
-            </p>
-            <button type="button">Learn more</button>
-          </li>
-          <li>
-            <img
-              src="./images/Typewriter-bro1.png"
-              alt="typewriter"
-              width="390"
-              height="264"
-            />
-            <h3>Writing</h3>
-            <p>
-              One of the most important and extensive areas of natural science,
-              the science that studies substances, also their composition
-            </p>
-            <button type="button">Learn more</button>
-          </li>
-          <li>
-            <img
-              src="./images/House-bookshelves-bro1.png"
-              alt="the man is reading a book"
-              width="390"
-              height="264"
-            />
-            <h3>Reading</h3>
-            <p>
-              Perception and response actions of the user resulting from the use
-              and/or upcoming use of the product, system or service
-            </p>
-            <button type="button">Learn more</button>
-          </li>
-          <li>
-            <img
-              src="./images/Podcast-audience-bro1.png"
-              alt="A man and a woman are listening to the recording"
-              width="408"
-              height="274"
-            />
-            <h3>Listening</h3>
-            <p>
-              Here you can find activities to practise your listening skills.
-              Listening will help you to improve your understanding
-            </p>
-            <button type="button">Learn more</button>
-          </li>
-        </ul>
+      <section class="skills" id="skills">
+        <div class="container">
+          <h2 class="skill-title">Skills</h2>
+          <ul class="skill-list">
+            <li class="skill-list-item1">
+              <img
+                src="./images/Shared-goals-bro1.png"
+                alt="the tacher takes the speaking exam"
+                width="390"
+                height="390"
+              />
+              <h3>Speaking</h3>
+
+              <p class="first-text">
+                Improve your English skills and confidence. Live classes and
+                interactive lessons online. 20% extra free for a limited time
+                only
+              </p>
+              <p>
+                Learn English online and improve your skills through our
+                high-quality courses and resources – all designed for adult
+                language learners.
+              </p>
+              <button type="button">Learn more</button>
+            </li>
+            <li class="skill-list-item2">
+              <img
+                src="./images/Typewriter-bro1.png"
+                alt="typewriter"
+                width="390"
+                height="264"
+              />
+              <h3>Writing</h3>
+              <p>
+                One of the most important and extensive areas of natural
+                science, the science that studies substances, also their
+                composition
+              </p>
+              <button type="button">Learn more</button>
+            </li>
+            <li class="skill-list-item3">
+              <img
+                src="./images/House-bookshelves-bro1.png"
+                alt="the man is reading a book"
+                width="390"
+                height="264"
+              />
+              <h3>Reading</h3>
+              <p>
+                Perception and response actions of the user resulting from the
+                use and/or upcoming use of the product, system or service
+              </p>
+              <button type="button">Learn more</button>
+            </li>
+            <li class="skill-list-item4">
+              <div class="image-container">
+                <img
+                  src="./images/Podcast-audience-bro1.png"
+                  alt="A man and a woman are listening to the recording"
+                  width="408"
+                  height="274"
+                />
+              </div>
+              <div class="text-container">
+                <h3>Listening</h3>
+                <p>
+                  Here you can find activities to practise your listening
+                  skills. Listening will help you to improve your understanding
+                </p>
+                <button type="button">Learn more</button>
+              </div>
+            </li>
+          </ul>
+        </div>
       </section>
       <section>
         <h2>About Us</h2>
