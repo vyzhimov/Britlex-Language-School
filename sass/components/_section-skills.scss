@@ -1,0 +1,43 @@
+.skills {
+  padding: 25px 0;
+}
+
+.skills__list {
+  padding: 0 1px;
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+}
+
+.skills__item {
+  padding: 8px 16px 45px;
+  background-color: $second-background-color;
+  border-radius: 5px;
+}
+
+.skills__thumb {
+  margin-bottom: 10px;
+}
+
+.skills__img {
+  display: block;
+  margin: 0 auto;
+}
+
+.skills__subtitle {
+  position: relative;
+  left: -3px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 3.33;
+  color: $second-title-color;
+}
+
+.skills__top-text,
+.skills__bottom-text {
+  margin-bottom: 30px;
+
+  font-size: 13px;
+  line-height: 20px;
+  color: $main-text-color;
+}

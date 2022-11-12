@@ -1,0 +1,16 @@
+.logo {
+  font-size: 24px;
+  line-height: $default-line-height;
+  color: #000000;
+  &__span {
+    color: #939393;
+  }
+
+  @include mobile575 {
+    font-size: 30px;
+  }
+
+  @include desktop {
+    font-size: 36px;
+  }
+}

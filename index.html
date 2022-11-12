@@ -18,133 +18,350 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
     <header>
       <div class="container header-container">
-        <nav class="header-navigation">
-          <a class="header-logo" href="/">Brit<span>lex</span></a>
-          <ul class="header-list">
-            <li class="header-item">
-              <a class="header-link" href="#">Home</a>
+        <nav class="header__navigation">
+          <a class="logo" href="./index.html"
+            >Brit<span class="logo__span">lex</span></a
+          >
+          <ul class="header__list">
+            <li class="header__item">
+              <a class="header__link" href="./index.html">Home</a>
             </li>
-            <li class="header-item">
-              <a class="header-link" href="#skills">Skills</a>
+            <li class="header__item">
+              <a class="header__link" href="#skills">Skills</a>
             </li>
-            <li class="header-item">
-              <a class="header-link" href="#">About Us</a>
+            <li class="header__item">
+              <a class="header__link" href="#">About Us</a>
             </li>
-            <li class="header-item">
-              <a class="header-link" href="#">Pricing</a>
+            <li class="header__item">
+              <a class="header__link" href="#">Pricing</a>
             </li>
-            <li class="header-item">
-              <a class="header-link" href="#">Contacts</a>
+            <li class="header__item">
+              <a class="header__link" href="#">Contacts</a>
             </li>
           </ul>
         </nav>
-        <button class="header-btn" type="button">Let’s Talk</button>
+        <button class="header__btn" type="button">Let’s Talk</button>
+        <button class="mobile-menu__open-btn" type="button">
+          <svg class="mobile-menu__icon" width="33" height="19">
+            <use href="./images/icons/icons.svg#mobile-burger-menu"></use>
+          </svg>
+        </button>
+        <div class="mobile-menu mobile-menu--is-hidden">
+          <div class="mobile-menu__wrapper">
+            <a class="logo" href="./index.html"
+              >Brit<span class="logo__span">lex</span></a
+            >
+            <button class="mobile-menu__close-btn" type="button">
+              <svg class="mobile-menu__icon" width="33" height="33">
+                <use href="./images/icons/icons.svg#mobile-close-btn"></use>
+              </svg>
+            </button>
+          </div>
+
+          <ul class="mobile-menu__list">
+            <li class="mobile-menu__item">
+              <a class="mobile-menu__link" href="./index.html">Home</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a class="mobile-menu__link" href="#skills">Skills</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a class="mobile-menu__link" href="#">About Us</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a class="mobile-menu__link" href="#">Pricing</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a class="mobile-menu__link" href="#">Contacts</a>
+            </li>
+          </ul>
+          <button class="mobile-menu__btn" type="button">Let’s Talk</button>
+        </div>
       </div>
     </header>
     <main>
-      <section class="learn" id="learn">
+      <section class="hero" id="learn">
         <div class="container">
-          <h1>Learn Any Foreign Language</h1>
+          <div class="hero__thumb">
+            <picture>
+              <source
+                srcset="
+                  ./images/hero/learn-desktop.png    1x,
+                  ./images/hero/learn-desktop-2x.png 2x
+                "
+                media="(min-width: 1378px)"
+              />
+              <source srcset="" media="(min-width: 992px)" />
+              <source
+                srcset="
+                  ./images/hero/learn768px.png    1x,
+                  ./images/hero/learn768px-2x.png 2x
+                "
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="
+                  ./images/hero/learn575px.png    1x,
+                  ./images/hero/learn575px-2x.png 2x
+                "
+                media="(min-width: 575px)"
+              />
+              <source
+                srcset="
+                  ./images/hero/learn320px.png    1x,
+                  ./images/hero/learn320px-2x.png 2x
+                "
+                media="(max-width: 574px)"
+                sizes="(max-width: 574px) 290px"
+              />
+              <img
+                class="hero__img"
+                src="./images/hero/learn-desktop.png"
+                alt="the girl learns foriegn languages"
+              />
+            </picture>
+          </div>
+          <h1 class="hero__title"><span>Learn Any</span> Foreign Language</h1>
           <img
+            class="hero__icon"
             src="./images/bulb-icon.svg"
             alt="lamp"
             width="85.24"
             height="85.24"
           />
-          <p>
+          <p class="hero__text">
             With our teachers who write a program for each student, you will be
             able to make your first sketch after the first lesson.
           </p>
-          <button type="button">Get started</button>
-          <img
-            src="./images/learning-languages.png"
-            alt="the girl learns foriegn languages"
-            width="654"
-            height="510"
-          />
+          <button class="btn hero__btn" type="button">Get started</button>
         </div>
       </section>
-      <section class="skills" id="skills">
+      <!-- <section class="skills" id="skills">
         <div class="container">
-          <h2 class="skill-title">Skills</h2>
-          <ul class="skill-list">
-            <li class="skill-list-item1">
-              <img
-                src="./images/Shared-goals-bro1.png"
-                alt="the tacher takes the speaking exam"
-                width="390"
-                height="390"
-              />
-              <h3>Speaking</h3>
-
-              <p class="first-text">
+          <h2 class="title skills-title">Skills</h2>
+          <ul class="skills__list">
+            <li class="skills__item">
+              <div class="skills__thumb">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/skills/speaking-desktop.png    1x,
+                      ./images/skills/speaking-desktop-2x.png 2x
+                    "
+                    media="(min-width: 1378px)"
+                  />
+                  <source srcset="" media="(min-width: 992px)" />
+                  <source
+                    srcset="
+                      ./images/skills/speaking768px.png    1x,
+                      ./images/skills/speaking768px-2x.png 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/skills/speaking575px.png    1x,
+                      ./images/skills/speaking575px-2x.png 2x
+                    "
+                    media="(min-width: 575px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/skills/speaking320px.png    1x,
+                      ./images/skills/speaking320px-2x.png 2x
+                    "
+                    media="(max-width: 574px)"
+                    sizes="(max-width: 574px) 213px, 100vw"
+                  />
+                  <img
+                    class="skills__img"
+                    src="./images/skills/speaking-desktop.png"
+                    alt="the teacher is taking the speaking exam"
+                  />
+                </picture>
+              </div>
+              <h3 class="skills__subtitle">Speaking</h3>
+              <p class="skills__top-text">
                 Improve your English skills and confidence. Live classes and
                 interactive lessons online. 20% extra free for a limited time
                 only
               </p>
-              <p>
+              <p class="skills__bottom-text">
                 Learn English online and improve your skills through our
                 high-quality courses and resources – all designed for adult
                 language learners.
               </p>
-              <button type="button">Learn more</button>
+              <button class="btn skills__btn" type="button">Learn more</button>
             </li>
-            <li class="skill-list-item2">
-              <img
-                src="./images/Typewriter-bro1.png"
-                alt="typewriter"
-                width="390"
-                height="264"
-              />
-              <h3>Writing</h3>
-              <p>
+
+            <li class="skills__item">
+              <div class="skills__thumb">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/skills/writing-desktop.png    1x,
+                      ./images/skills/writing-desktop-2x.png 2x
+                    "
+                    media="(min-width: 1378px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/skills/writing992px.png    1x,
+                      ./images/skills/writing992px-2x.png 2x
+                    "
+                    media="(min-width: 992px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/skills/writing768px.png    1x,
+                      ./images/skills/writing768px-2x.png 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/skills/writing575px.png    1x,
+                      ./images/skills/writing575px-2x.png 2x
+                    "
+                    media="(min-width: 575px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/skills/writing320px.png    1x,
+                      ./images/skills/writing320px-2x.png 2x
+                    "
+                    media="(max-width: 574px)"
+                  />
+                  <img
+                    class="skills__img"
+                    src="./images/skills/writing-desktop.png"
+                    alt="typewriter"
+                  />
+                </picture>
+              </div>
+              <h3 class="skills__subtitle">Writing</h3>
+              <p class="skills__top-text">
                 One of the most important and extensive areas of natural
                 science, the science that studies substances, also their
                 composition
               </p>
-              <button type="button">Learn more</button>
+              <button class="btn skills__btn" type="button">Learn more</button>
             </li>
-            <li class="skill-list-item3">
-              <img
-                src="./images/House-bookshelves-bro1.png"
-                alt="the man is reading a book"
-                width="390"
-                height="264"
-              />
-              <h3>Reading</h3>
-              <p>
+
+            <li class="skills__item">
+              <div class="skills__thumb">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/skills/reading-desktop.png    1x,
+                      ./images/skills/reading-desktop-2x.png 2x
+                    "
+                    media="(min-width: 1378px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/skills/reading992px.png    1x,
+                      ./images/skills/reading992px-2x.png 2x
+                    "
+                    media="(min-width: 992px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/skills/reading768px.png    1x,
+                      ./images/skills/reading768px-2x.png 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/skills/reading575px.png    1x,
+                      ./images/skills/reading575px-2x.png 2x
+                    "
+                    media="(min-width: 575px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/skills/reading320px.png    1x,
+                      ./images/skills/reading320px-2x.png 2x
+                    "
+                    media="(max-width: 574px)"
+                  />
+                  <img
+                    class="skills__img"
+                    src="./images/skills/reading-desktop.png"
+                    alt="the man is reading a book"
+                  />
+                </picture>
+              </div>
+              <h3 class="skills__subtitle">Reading</h3>
+              <p class="skills__top-text">
                 Perception and response actions of the user resulting from the
                 use and/or upcoming use of the product, system or service
               </p>
-              <button type="button">Learn more</button>
+              <button class="btn skills__btn" type="button">Learn more</button>
             </li>
-            <li class="skill-list-item4">
-              <div class="image-container">
-                <img
-                  src="./images/Podcast-audience-bro1.png"
-                  alt="A man and a woman are listening to the recording"
-                  width="408"
-                  height="274"
-                />
+
+            <li class="skills__item">
+              <div class="skills__thumb">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/skills/listening-desktop.png    1x,
+                      ./images/skills/listening-desktop-2x.png 2x
+                    "
+                    media="(min-width: 1378px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/skills/listening992px.png    1x,
+                      ./images/skills/listening992px-2x.png 2x
+                    "
+                    media="(min-width: 992px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/skills/listening768px.png    1x,
+                      ./images/skills/listening768px-2x.png 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/skills/listening575px.png    1x,
+                      ./images/skills/listening575px-2x.png 2x
+                    "
+                    media="(min-width: 575px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/skills/listening320px.png    1x,
+                      ./images/skills/listening320px-2x.png 2x
+                    "
+                    media="(max-width: 574px)"
+                  />
+                  <img
+                    class="skills__img"
+                    src="./images/skills/listening-desktop.png"
+                    alt="A man and a woman are listening to the recording"
+                  />
+                </picture>
               </div>
-              <div class="text-container">
-                <h3>Listening</h3>
-                <p>
-                  Here you can find activities to practise your listening
-                  skills. Listening will help you to improve your understanding
-                </p>
-                <button type="button">Learn more</button>
-              </div>
+              <h3 class="skills__subtitle">Listening</h3>
+              <p class="skills__top-text">
+                Here you can find activities to practise your listening skills.
+                Listening will help you to improve your understanding
+              </p>
+              <button class="btn skills__btn" type="button">Learn more</button>
             </li>
           </ul>
         </div>
-      </section>
-      <section>
+      </section> -->
+      <!-- <section>
         <h2>About Us</h2>
         <p>
           The model offers a framework for discussing problems related to the
@@ -164,8 +381,8 @@
           width="540"
           height="540"
         />
-      </section>
-      <section>
+      </section> -->
+      <!-- <section>
         <h2>Pricing</h2>
         <ul>
           <li>
@@ -208,8 +425,8 @@
             <p><span>£12.99</span> per month</p>
           </li>
         </ul>
-      </section>
-      <section>
+      </section> -->
+      <!-- <section>
         <img
           src="./images/contact.png"
           alt="the boy launches a paper plane"
@@ -225,15 +442,17 @@
           <input type="email" />
           <input type="submit" value="subcribe" />
         </form>
-      </section>
+      </section> -->
     </main>
-    <footer>
+    <!-- <footer>
       <a href="/"><span>Brit</span>lex</a>
       <ul>
         <li><a href="#">Terms and Conditions</a></li>
         <li><a href="#">Privacy Policy</a></li>
         <li><a href="#">Cookie Policy</a></li>
       </ul>
-    </footer>
+    </footer> -->
+
+    <script src="./JS/mobile-menu.js"></script>
   </body>
 </html>

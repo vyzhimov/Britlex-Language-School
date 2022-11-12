@@ -1,0 +1,120 @@
+header {
+  padding-top: 36px;
+  padding-bottom: 15px;
+
+  @include mobile575 {
+    padding-top: 39px;
+    padding-bottom: 11px;
+  }
+
+  @include tablet {
+    padding-top: 39px;
+    padding-bottom: 20px;
+  }
+
+  @include desktop992 {
+    padding-top: 25px;
+    padding-bottom: 34px;
+  }
+
+  @include desktop {
+    padding-top: 55px;
+    padding-bottom: 30px;
+  }
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__navigation {
+  display: flex;
+  align-items: center;
+  gap: calc(100vw * 0.17);
+
+  @include desktop {
+    gap: 236px;
+  }
+}
+
+.header__list {
+  display: flex;
+  gap: 30px;
+  @media screen and (max-width: 991px) {
+    display: none;
+  }
+
+  @include desktop {
+    gap: 50px;
+  }
+}
+
+.header__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__link {
+  position: relative;
+  display: block;
+  padding: 10px 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: $default-line-height;
+  color: $second-title-color;
+  overflow: hidden;
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    transform: translateX(-100%);
+    background-color: $second-title-color;
+    transition: transform $transition-duration $transition-timing;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    transform: translateX(0);
+  }
+
+  @include desktop {
+    font-size: 20px;
+  }
+}
+
+.header__btn {
+  width: 160px;
+  height: 50px;
+  padding: 10px;
+  border: 2px solid $second-title-color;
+  border-radius: 5px;
+  font-size: 18px;
+  line-height: $default-line-height;
+  color: $main-title-color;
+  background-color: $main-background-color;
+  transition: background-color $transition-duration $transition-timing,
+    color $transition-duration $transition-timing;
+
+  &:hover,
+  &:focus {
+    background-color: $second-title-color;
+    color: $text-btn-color;
+  }
+
+  @media screen and (max-width: 991px) {
+    display: none;
+  }
+
+  @include desktop {
+    width: 312px;
+    height: 70px;
+  }
+}
