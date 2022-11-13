@@ -5,8 +5,16 @@
   // outline: 1px solid red;
 
   @include mobile575 {
-    // width: 992px;
+    width: 575px;
     padding: 0 32px;
+  }
+
+  @include tablet {
+    width: 768px;
+  }
+
+  @include desktop992 {
+    width: 992px;
   }
 
   @include desktop {

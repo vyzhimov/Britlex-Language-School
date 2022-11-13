@@ -32,7 +32,7 @@ header {
 .header__navigation {
   display: flex;
   align-items: center;
-  gap: calc(100vw * 0.17);
+  gap: 167px;
 
   @include desktop {
     gap: 236px;

@@ -47,46 +47,48 @@
         </nav>
         <button class="header__btn" type="button">Let’s Talk</button>
         <button class="mobile-menu__open-btn" type="button">
-          <svg class="mobile-menu__icon" width="33" height="19">
+          <svg class="mobile-menu__open-icon" width="33" height="19">
             <use href="./images/icons/icons.svg#mobile-burger-menu"></use>
           </svg>
         </button>
-        <div class="mobile-menu mobile-menu--is-hidden">
-          <div class="mobile-menu__wrapper">
-            <a class="logo" href="./index.html"
-              >Brit<span class="logo__span">lex</span></a
-            >
-            <button class="mobile-menu__close-btn" type="button">
-              <svg class="mobile-menu__icon" width="33" height="33">
-                <use href="./images/icons/icons.svg#mobile-close-btn"></use>
-              </svg>
-            </button>
-          </div>
+        <div class="mobile-menu__backdrop mobile-menu__backdrop--is-hidden">
+          <div class="mobile-menu">
+            <div class="mobile-menu__wrapper">
+              <a class="logo" href="./index.html"
+                >Brit<span class="logo__span">lex</span></a
+              >
+              <button class="mobile-menu__close-btn" type="button">
+                <svg class="mobile-menu__close-icon" width="34" height="34">
+                  <use href="./images/icons/icons.svg#mobile-close-btn"></use>
+                </svg>
+              </button>
+            </div>
 
-          <ul class="mobile-menu__list">
-            <li class="mobile-menu__item">
-              <a class="mobile-menu__link" href="./index.html">Home</a>
-            </li>
-            <li class="mobile-menu__item">
-              <a class="mobile-menu__link" href="#skills">Skills</a>
-            </li>
-            <li class="mobile-menu__item">
-              <a class="mobile-menu__link" href="#">About Us</a>
-            </li>
-            <li class="mobile-menu__item">
-              <a class="mobile-menu__link" href="#">Pricing</a>
-            </li>
-            <li class="mobile-menu__item">
-              <a class="mobile-menu__link" href="#">Contacts</a>
-            </li>
-          </ul>
-          <button class="mobile-menu__btn" type="button">Let’s Talk</button>
+            <ul class="mobile-menu__list">
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link" href="./index.html">Home</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link" href="#skills">Skills</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link" href="#">About Us</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link" href="#">Pricing</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link" href="#">Contacts</a>
+              </li>
+            </ul>
+            <button class="mobile-menu__btn" type="button">Let’s Talk</button>
+          </div>
         </div>
       </div>
     </header>
     <main>
       <section class="hero" id="learn">
-        <div class="container">
+        <div class="container hero__container">
           <div class="hero__thumb">
             <picture>
               <source
@@ -96,7 +98,13 @@
                 "
                 media="(min-width: 1378px)"
               />
-              <source srcset="" media="(min-width: 992px)" />
+              <source
+                srcset="
+                  ./images/hero/learn992px.png    1x,
+                  ./images/hero/learn992px-2x.png 2x
+                "
+                media="(min-width: 992px)"
+              />
               <source
                 srcset="
                   ./images/hero/learn768px.png    1x,
@@ -126,19 +134,28 @@
               />
             </picture>
           </div>
-          <h1 class="hero__title"><span>Learn Any</span> Foreign Language</h1>
-          <img
-            class="hero__icon"
-            src="./images/bulb-icon.svg"
-            alt="lamp"
-            width="85.24"
-            height="85.24"
-          />
-          <p class="hero__text">
-            With our teachers who write a program for each student, you will be
-            able to make your first sketch after the first lesson.
-          </p>
-          <button class="btn hero__btn" type="button">Get started</button>
+          <dic class="hero__text-container">
+            <div class="hero__title-wrapper">
+              <h1 class="hero__title">
+                <span class="hero__title--mobile"
+                  ><span class="hero__title--tablet">Learn</span> Any</span
+                >
+                Foreign Language
+              </h1>
+              <img
+                class="hero__icon"
+                src="./images/bulb-icon.svg"
+                alt="lamp"
+                width="85.24"
+                height="85.24"
+              />
+            </div>
+            <p class="hero__text">
+              With our teachers who write a program for each student, you will
+              be able to make your first sketch after the first lesson.
+            </p>
+            <button class="btn hero__btn" type="button">Get started</button>
+          </dic>
         </div>
       </section>
       <!-- <section class="skills" id="skills">

@@ -12,14 +12,70 @@
   }
 
   &__icon {
+    position: absolute;
     @media screen and (max-width: 767px) {
       display: none;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+      left: 220px;
+      top: 55px;
+    }
+
+    @include desktop992 {
+      left: 300px;
+      top: 90px;
+    }
+
+    @include desktop {
+      left: 400px;
+      top: 120px;
     }
   }
 
   @include mobile575 {
     padding: 0 0 48px 0;
   }
+
+  @include tablet {
+    padding: 20px 0 28px 0;
+  }
+
+  @include desktop992 {
+    padding: 34px 0 36px 0;
+  }
+
+  @include desktop {
+    padding: 25px 0 90px 0;
+  }
+}
+
+.hero__container {
+  @include tablet {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  @include desktop992 {
+    column-gap: 49px;
+  }
+
+  @include desktop {
+    column-gap: 120px;
+  }
+}
+
+.hero__text-container {
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.hero__title-wrapper {
+  position: relative;
 }
 
 .hero__title {
@@ -34,7 +90,7 @@
     & {
       max-width: 220px;
     }
-    & span {
+    &--mobile {
       display: inline-block;
       margin-right: 5px;
     }
@@ -44,6 +100,33 @@
     margin-bottom: 26px;
     font-size: 34px;
     line-height: 1.31;
+  }
+
+  @include tablet {
+    font-size: 36px;
+    line-height: 1.25;
+    margin: 0 0 25px 0;
+    text-align: left;
+    max-width: 217px;
+
+    &--tablet {
+      display: inline-block;
+      margin-right: 65px;
+    }
+  }
+
+  @include desktop992 {
+    margin-bottom: 27px;
+    font-size: 48px;
+    line-height: 1.33;
+    max-width: 290px;
+  }
+
+  @include desktop {
+    margin-bottom: 40px;
+    font-size: 64px;
+    line-height: 1.25;
+    max-width: 386px;
   }
 }
 
@@ -58,5 +141,21 @@
     margin: 0 auto 37px;
     max-width: 486px;
     font-size: 16px;
+  }
+
+  @include tablet {
+    font-size: 16px;
+    text-align: left;
+  }
+
+  @include desktop992 {
+    font-size: 20px;
+    line-height: $default-line-height;
+  }
+
+  @include desktop {
+    margin-bottom: 60px;
+    font-size: 24px;
+    line-height: $default-line-height;
   }
 }
